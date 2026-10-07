@@ -4,7 +4,7 @@
 > **Fase 2 · Ir Além 1:** interface do CardioIA em React + Vite, com login simulado,
 > pacientes, agendamento de consultas e dashboard. Sem back-end: os dados são simulados.
 
-**Vídeo de demonstração (YouTube, não listado):** _adicionar o link aqui_
+**Vídeo de demonstração (YouTube, não listado):** https://youtu.be/EK6RL6GIeNY
 
 **Projeto principal da Fase 2:** [CardioIA-Fase2](https://github.com/souzaleite-dev/CardioIA-Fase2)
 

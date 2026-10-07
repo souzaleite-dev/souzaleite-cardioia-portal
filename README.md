@@ -127,7 +127,7 @@ souzaleite-cardioia-portal/
 - **Acessibilidade e responsividade.** Rótulos ligados aos campos por `useId`, erros
   anunciados (`aria-invalid`, `aria-describedby`), confirmação e contagem em `aria-live`,
   link "Pular para o conteúdo", foco visível e `prefers-reduced-motion`. O layout vai de
-  360 px a desktop sem rolagem horizontal (conferido em 360, 375 e 1280 px).
+  360 px a desktop sem rolagem horizontal (conferido em 360, 390 e 1440 px).
 
 ---
 

@@ -1,0 +1,109 @@
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.busca {
+  position: relative;
+  flex: 1 1 16rem;
+}
+
+.busca input {
+  padding-left: 2.4rem;
+}
+
+.lupa {
+  position: absolute;
+  top: 50%;
+  left: 0.85rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--tinta-3);
+  translate: 0 -50%;
+  pointer-events: none;
+}
+
+.resumo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.chave {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--atencao);
+  font-weight: 500;
+}
+
+.chave svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-width: 2.5;
+}
+
+.lista {
+  --colunas-pacientes: minmax(9rem, 1.35fr) repeat(4, minmax(5.25rem, 1fr)) minmax(9.25rem, 1fr) 6.5rem;
+
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio-l);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.cabecalho {
+  display: grid;
+  grid-template-columns: var(--colunas-pacientes);
+  gap: 1rem;
+  padding: 0.7rem 1.25rem;
+  border-bottom: 1px solid var(--linha);
+  background: var(--superficie-2);
+  color: var(--tinta-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cabecalho span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cabecalho i {
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--cor);
+}
+
+.linhas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carregando {
+  padding: 1rem 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .cabecalho {
+    display: none;
+  }
+
+  .busca {
+    flex-basis: 100%;
+  }
+}

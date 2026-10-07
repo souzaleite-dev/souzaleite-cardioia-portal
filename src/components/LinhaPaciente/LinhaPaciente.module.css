@@ -1,0 +1,166 @@
+/* mesmas colunas no cabeçalho da lista (Pacientes.module.css) */
+.linha {
+  display: grid;
+  grid-template-columns: var(--colunas-pacientes);
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--linha);
+  transition: background-color 0.18s var(--curva);
+}
+
+.linha:first-child {
+  border-top: 0;
+}
+
+.linha:hover {
+  background: var(--superficie-2);
+}
+
+.paciente {
+  display: grid;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.paciente strong {
+  font-size: 0.9375rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.paciente span {
+  color: var(--tinta-2);
+  font-size: 0.8125rem;
+}
+
+.medida {
+  display: grid;
+  min-width: 0;
+}
+
+.rotulo {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--tinta-3);
+  font-size: 0.75rem;
+  font-weight: 550;
+}
+
+.rotulo i {
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--cor);
+}
+
+.valor {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.valor small {
+  color: var(--tinta-3);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.valor svg {
+  align-self: center;
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-width: 2.5;
+}
+
+.fora {
+  color: var(--atencao);
+}
+
+.comDoenca,
+.semDoenca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comDoenca {
+  background: var(--alerta-fundo);
+  color: var(--alerta);
+}
+
+.comDoenca svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.semDoenca {
+  background: var(--sombreado);
+  color: var(--tinta-2);
+}
+
+.acao {
+  justify-self: end;
+}
+
+@media (max-width: 860px) {
+  .linha {
+    grid-template-areas:
+      'paciente situacao'
+      'm1 m2'
+      'm3 m4'
+      'acao acao';
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    padding: 1rem;
+  }
+
+  .paciente {
+    grid-area: paciente;
+  }
+
+  .medida:nth-child(2) {
+    grid-area: m1;
+  }
+
+  .medida:nth-child(3) {
+    grid-area: m2;
+  }
+
+  .medida:nth-child(4) {
+    grid-area: m3;
+  }
+
+  .medida:nth-child(5) {
+    grid-area: m4;
+  }
+
+  .situacao {
+    grid-area: situacao;
+    justify-self: end;
+    align-self: start;
+  }
+
+  .rotulo {
+    display: flex;
+  }
+
+  .acao {
+    grid-area: acao;
+    justify-self: stretch;
+  }
+
+  .acao > * {
+    width: 100%;
+    border-color: var(--linha);
+  }
+}

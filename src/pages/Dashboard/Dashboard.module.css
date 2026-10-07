@@ -1,0 +1,385 @@
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.35rem 1.5rem 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio-l);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.agenda {
+  grid-row: span 2;
+}
+
+.topoPainel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.topoPainel h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.topoPainel h2 svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--coracao);
+}
+
+.verTudo,
+.contagem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.verTudo svg {
+  width: 1rem;
+  height: 1rem;
+  transition: translate 0.18s var(--curva);
+}
+
+.verTudo:hover {
+  color: var(--tinta);
+}
+
+.verTudo:hover svg {
+  translate: 2px 0;
+}
+
+.proxima {
+  display: grid;
+  gap: 0.2rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.hora {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.quando {
+  color: var(--tinta-2);
+  font-weight: 550;
+}
+
+.quando::first-letter {
+  text-transform: uppercase;
+}
+
+.quem {
+  margin-top: 0.55rem;
+}
+
+.observacao {
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+}
+
+.subtitulo {
+  color: var(--tinta-3);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.lista {
+  display: grid;
+  margin: -0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista li {
+  display: grid;
+  grid-template-columns: 3.5rem 7.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--linha);
+  font-size: 0.9375rem;
+}
+
+.lista li:last-child {
+  border-bottom: 0;
+}
+
+.listaHora {
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.listaData {
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+}
+
+.listaData::first-letter {
+  text-transform: uppercase;
+}
+
+.listaQuem {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--tinta-2);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.listaQuem strong {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.semana {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--linha);
+}
+
+.semana ol {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.semana li {
+  display: grid;
+  justify-items: center;
+  gap: 0.15rem;
+  padding: 0.55rem 0 0.5rem;
+  border-radius: var(--raio);
+  background: var(--superficie-2);
+}
+
+.semana li > span:first-child {
+  color: var(--tinta-3);
+  font-size: 0.75rem;
+  font-weight: 550;
+  text-transform: capitalize;
+}
+
+.semana strong {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.semana .hoje strong {
+  background: var(--acao);
+  color: #fff;
+}
+
+.semana i {
+  display: flex;
+  gap: 3px;
+  height: 0.4rem;
+}
+
+.semana b {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--coracao);
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.total span {
+  color: var(--tinta-2);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.proporcao {
+  height: 0.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sombreado);
+}
+
+.proporcao span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--coracao);
+  transition: width 0.4s var(--curva);
+}
+
+.legenda,
+.perfil {
+  display: grid;
+  margin: 0;
+}
+
+.legenda {
+  gap: 0.35rem;
+}
+
+.legenda div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9375rem;
+}
+
+.legenda dt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--tinta-2);
+}
+
+.legenda dt i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--linha-forte);
+}
+
+.legenda dt .marcaDoenca {
+  background: var(--coracao);
+}
+
+.legenda dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.legenda small {
+  color: var(--tinta-3);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.perfil {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--linha);
+}
+
+.perfil dt {
+  color: var(--tinta-3);
+  font-size: 0.8125rem;
+}
+
+.perfil dd {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.barras {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.barras li {
+  display: grid;
+  grid-template-columns: minmax(8.5rem, auto) 1fr 1.25rem;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.9375rem;
+}
+
+.barras strong {
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.trilho {
+  height: 0.4rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sombreado);
+}
+
+.trilho span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--acao);
+  transition: width 0.4s var(--curva);
+}
+
+@media (max-width: 1100px) {
+  .grade {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .agenda {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .painel {
+    padding: 1.15rem 1.1rem 1.25rem;
+  }
+
+  .lista li {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+  }
+
+  .listaQuem {
+    grid-column: 2;
+  }
+
+  .barras li {
+    grid-template-columns: minmax(0, 1fr) 1.25rem;
+    gap: 0.35rem 0.85rem;
+  }
+
+  .trilho {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+}

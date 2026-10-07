@@ -1,0 +1,27 @@
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--tinta);
+}
+
+.icone {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.coracao {
+  fill: var(--coracao);
+}
+
+.ecg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,35 @@
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.textos {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sobretitulo {
+  color: var(--tinta-3);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sobretitulo::first-letter {
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  max-width: 62ch;
+  color: var(--tinta-2);
+  text-wrap: pretty;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}

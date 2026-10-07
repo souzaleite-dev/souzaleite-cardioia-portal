@@ -1,0 +1,260 @@
+.colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.painel {
+  display: grid;
+  gap: 1.35rem;
+  padding: 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio-l);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.grupo {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.grupo legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.ajuda {
+  padding: 0.8rem 1rem;
+  border: 1px dashed var(--linha-forte);
+  border-radius: var(--raio);
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+}
+
+.horarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(4.75rem, 1fr));
+  gap: 0.4rem;
+}
+
+.atendimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  position: relative;
+}
+
+.chip input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chip input:disabled {
+  cursor: not-allowed;
+}
+
+.chip span {
+  display: grid;
+  place-items: center;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 10px;
+  background: var(--superficie);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+  transition:
+    background-color 0.18s var(--curva),
+    border-color 0.18s var(--curva),
+    color 0.18s var(--curva);
+}
+
+.chip small {
+  color: var(--tinta-3);
+  font-size: 0.6875rem;
+  font-weight: 500;
+}
+
+.chip:hover input:not(:disabled):not(:checked) + span {
+  border-color: oklch(0.78 0.012 265);
+  background: var(--superficie-2);
+}
+
+.chip input:checked + span {
+  border-color: var(--acao);
+  background: var(--acao);
+  color: #fff;
+}
+
+.chip input:focus-visible + span {
+  outline: 2px solid var(--foco);
+  outline-offset: 2px;
+}
+
+.chip input:disabled + span {
+  border-style: dashed;
+  border-color: var(--linha);
+  background: var(--superficie-2);
+  color: var(--tinta-3);
+  text-decoration: line-through;
+}
+
+.chip input:disabled + span small {
+  text-decoration: none;
+}
+
+.erro {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  color: var(--alerta);
+  font-size: 0.8125rem;
+  font-weight: 550;
+}
+
+.erro svg {
+  flex: none;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.confirmacao:not(:empty) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--raio);
+  background: var(--ok-fundo);
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.confirmacao svg {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.topoAgenda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.topoAgenda span {
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.dia {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dia h3 {
+  color: var(--tinta-3);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.dia h3::first-letter {
+  text-transform: uppercase;
+}
+
+.dia ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dia li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--linha);
+}
+
+.dia li:last-child {
+  border-bottom: 0;
+}
+
+.horaItem {
+  flex: none;
+  width: 3.25rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.detalhes {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.detalhes strong {
+  font-weight: 600;
+}
+
+.detalhes span {
+  overflow: hidden;
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.realizada {
+  opacity: 0.6;
+}
+
+.selo {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--sombreado);
+  color: var(--tinta-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .colunas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .painel {
+    padding: 1.15rem;
+  }
+
+  .dia li {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.85rem;
+  }
+}

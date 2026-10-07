@@ -1,0 +1,66 @@
+.esqueleto {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.bloco {
+  height: var(--altura);
+  border-radius: var(--raio);
+  background: linear-gradient(90deg, var(--sombreado) 25%, oklch(0.23 0.03 268 / 0.025) 50%, var(--sombreado) 75%);
+  background-size: 200% 100%;
+  animation: brilho 1.4s ease-in-out infinite;
+}
+
+@keyframes brilho {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.erro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--raio);
+  background: var(--alerta-fundo);
+  color: var(--alerta);
+}
+
+.erro > svg {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.erro p {
+  flex: 1;
+  min-width: 14rem;
+  font-size: 0.9375rem;
+}
+
+.vazio {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  padding: 2.75rem 1.5rem;
+  color: var(--tinta-2);
+  text-align: center;
+}
+
+.vazio > svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--tinta-3);
+}
+
+.tituloVazio {
+  max-width: 36ch;
+  color: var(--tinta);
+  font-weight: 600;
+}

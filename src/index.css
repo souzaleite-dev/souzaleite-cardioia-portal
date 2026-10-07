@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light;
+
+  /* neutros com um toque do azul-marinho da marca (matiz 265) */
+  --tela: oklch(0.975 0.004 265);
+  --lateral: oklch(0.958 0.006 265);
+  --superficie: oklch(1 0 0);
+  --superficie-2: oklch(0.977 0.004 265);
+  --linha: oklch(0.92 0.006 265);
+  --linha-forte: oklch(0.86 0.01 265);
+  --tinta: oklch(0.23 0.03 268);
+  --tinta-2: oklch(0.44 0.02 266);
+  --tinta-3: oklch(0.53 0.015 266);
+  --sombreado: oklch(0.23 0.03 268 / 0.055);
+
+  /* ação principal e foco */
+  --acao: oklch(0.29 0.06 268);
+  --acao-hover: oklch(0.36 0.07 268);
+  --foco: oklch(0.6 0.15 255);
+
+  /* marca e estados (sempre acompanhados de texto ou ícone) */
+  --coracao: oklch(0.63 0.21 17);
+  --alerta: oklch(0.52 0.19 22);
+  --alerta-fundo: oklch(0.965 0.022 18);
+  --atencao: oklch(0.53 0.12 62);
+  --ok: oklch(0.5 0.11 158);
+  --ok-fundo: oklch(0.965 0.028 160);
+
+  /* uma cor por tipo de dado, só em marcadores pequenos */
+  --dado-pressao: oklch(0.56 0.17 300);
+  --dado-colesterol: oklch(0.65 0.15 60);
+  --dado-fc: oklch(0.63 0.21 17);
+  --dado-spo2: oklch(0.6 0.13 235);
+
+  --raio-s: 8px;
+  --raio: 12px;
+  --raio-l: 18px;
+  --sombra: 0 1px 2px oklch(0.23 0.03 268 / 0.04), 0 1px 3px oklch(0.23 0.03 268 / 0.05);
+  --sombra-elevada: 0 12px 32px -8px oklch(0.23 0.03 268 / 0.14), 0 2px 6px oklch(0.23 0.03 268 / 0.05);
+  --curva: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --z-fixo: 10;
+  --z-navegacao: 20;
+
+  font-family: system-ui, -apple-system, 'Segoe UI Variable Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--tinta);
+  background: var(--tela);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--foco);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: oklch(0.6 0.15 255 / 0.2);
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

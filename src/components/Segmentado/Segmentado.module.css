@@ -1,0 +1,65 @@
+.grupo {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rotulo {
+  margin-bottom: 0.4rem;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.trilho {
+  display: inline-flex;
+  max-width: 100%;
+  gap: 2px;
+  padding: 3px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: var(--sombreado);
+}
+
+.opcao {
+  position: relative;
+  flex: none;
+}
+
+.opcao input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.opcao span {
+  display: block;
+  padding: 0.42rem 0.85rem;
+  border-radius: var(--raio-s);
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+  font-weight: 550;
+  white-space: nowrap;
+  transition:
+    background-color 0.18s var(--curva),
+    color 0.18s var(--curva),
+    box-shadow 0.18s var(--curva);
+}
+
+.opcao:hover input:not(:checked) + span {
+  color: var(--tinta);
+}
+
+.opcao input:checked + span {
+  background: var(--superficie);
+  color: var(--tinta);
+  box-shadow: var(--sombra);
+}
+
+.opcao input:focus-visible + span {
+  outline: 2px solid var(--foco);
+  outline-offset: 1px;
+}
